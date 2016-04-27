@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2015
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StarFox.CSharp.Plugins", "StarFox.CSharp.Plugins.csproj", "{937EFFA7-C881-BFD8-04F9-BBDC1A1EC4CE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StarFox.CSharp", "StarFox.CSharp.csproj", "{CC232C37-A1FA-B3C3-9AEA-65A1FE183096}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{937EFFA7-C881-BFD8-04F9-BBDC1A1EC4CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{937EFFA7-C881-BFD8-04F9-BBDC1A1EC4CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{937EFFA7-C881-BFD8-04F9-BBDC1A1EC4CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{937EFFA7-C881-BFD8-04F9-BBDC1A1EC4CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC232C37-A1FA-B3C3-9AEA-65A1FE183096}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC232C37-A1FA-B3C3-9AEA-65A1FE183096}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC232C37-A1FA-B3C3-9AEA-65A1FE183096}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC232C37-A1FA-B3C3-9AEA-65A1FE183096}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
