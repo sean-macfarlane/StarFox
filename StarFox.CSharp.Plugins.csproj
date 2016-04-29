@@ -75,7 +75,6 @@
   <ItemGroup>
     <None Include="Assets\Destroyed_city_FREE\Destroyed_city_FREE_Info.txt" />
     <None Include="Assets\Destroyed_city_FREE\Shaders\AlphaTest-DiffuseDoubleSide.shader" />
-    <None Include="Assets\Resources\Arwing\Readme.txt" />
     <None Include="Assets\Resources\Readme.txt" />
     <None Include="Assets\Standard Assets\Environment\Water\Water\Shaders\FXWaterPro.shader" />
     <None Include="Assets\Standard Assets\Environment\Water\Water4\Shaders\FXWater4Advanced.shader" />

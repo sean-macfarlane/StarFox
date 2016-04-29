@@ -69,20 +69,27 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Collect.cs" />
-    <Compile Include="Assets\Destroy.cs" />
     <Compile Include="Assets\Destroyed_city_FREE\Standard Assets\Character Controllers\Sources\Scripts\MouseLook.cs" />
-    <Compile Include="Assets\FollowPlayer.cs" />
-    <Compile Include="Assets\MoveFoward.cs" />
-    <Compile Include="Assets\PlayerController.cs" />
-    <Compile Include="Assets\Shoot.cs" />
-    <Compile Include="Assets\Spawner.cs" />
-    <Compile Include="Assets\Tricks.cs" />
+    <Compile Include="Assets\Gameover.cs" />
+    <Compile Include="Assets\Scripts\AI.cs" />
+    <Compile Include="Assets\Scripts\Collect.cs" />
+    <Compile Include="Assets\Scripts\Destroy.cs" />
+    <Compile Include="Assets\Scripts\FollowPlayer.cs" />
+    <Compile Include="Assets\Scripts\GameManager.cs" />
+    <Compile Include="Assets\Scripts\HealthBar.cs" />
+    <Compile Include="Assets\Scripts\HealthManager.cs" />
+    <Compile Include="Assets\Scripts\MoveFoward.cs" />
+    <Compile Include="Assets\Scripts\Music.cs" />
+    <Compile Include="Assets\Scripts\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\Rotate.cs" />
+    <Compile Include="Assets\Scripts\Shoot.cs" />
+    <Compile Include="Assets\Scripts\Spawner.cs" />
+    <Compile Include="Assets\Scripts\StartScreen.cs" />
+    <Compile Include="Assets\Scripts\Tricks.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Destroyed_city_FREE\Destroyed_city_FREE_Info.txt" />
     <None Include="Assets\Destroyed_city_FREE\Shaders\AlphaTest-DiffuseDoubleSide.shader" />
-    <None Include="Assets\Resources\Arwing\Readme.txt" />
     <None Include="Assets\Resources\Readme.txt" />
     <None Include="Assets\Standard Assets\Environment\Water\Water\Shaders\FXWaterPro.shader" />
     <None Include="Assets\Standard Assets\Environment\Water\Water4\Shaders\FXWater4Advanced.shader" />
