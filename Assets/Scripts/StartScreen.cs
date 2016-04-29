@@ -8,12 +8,20 @@ using UnityEngine.UI;
 ///</summary>
 public class StartScreen : MonoBehaviour
 {
-    AudioSource sound;
-    string _name;
-    // Use this for initialization
+    AudioSource _sound; //Menu Select Sound
+    string _name;   //Name of the scene
+    string _highscoreKey = "VALUE_HIGHSCORE";   //Stores the Highscore
+
+    /// <summary>
+    /// Use this for initialization
+    /// </summary>
     void Start()
     {
-        sound = GetComponent<AudioSource>();
+        if (!PlayerPrefs.HasKey(_highscoreKey))
+        {
+            PlayerPrefs.SetInt(_highscoreKey, 0);
+        }
+        _sound = GetComponent<AudioSource>();
     }
 
     ///<summary>
@@ -23,13 +31,21 @@ public class StartScreen : MonoBehaviour
     public void ChangeSceneWithName(string sceneName)
     {
         _name = sceneName;
-        sound.Play();
+        _sound.Play();
         Invoke("PlaySound", 2.0f);
-        
+
     }
 
+    /// <summary>
+    /// Play the Sound and then switches scene
+    /// </summary>
     void PlaySound()
     {
+        if (_name.Equals("_scene"))
+        {
+            Destroy(FindObjectOfType<Music>().gameObject);
+        }
+
         SceneManager.LoadScene(_name);
     }
 }

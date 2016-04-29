@@ -1,33 +1,39 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+/// <summary>
+/// Basic AI for Enemies
+/// </summary>
 public class AI : MonoBehaviour
 {
+    public float targetDistance = 75.0f;        //Distance from Player
+    public float enemySpeed = 75.0f;     //Enemy Movement Speed
+    public GameObject bullet;   //Enemy Bullet Prefab
+    public float velocity = 150.0f;  // Enemy Bullet Velocity
+    GameObject _plane;  //Game Plane
+    float _destroyTime = 2.0f;  //Destroy Time of Bullet
+    AudioSource _sound; //Sound of Bullet
 
-    public float targetDistance = 10.0f;
-    public float enemySpeed = 0.0f;
-    public GameObject bullet;
-    public float velocity = 10.0f;
-    GameObject plane;
-    float destroyTime = 2.0f;
-    AudioSource sound;
-
-    // Use this for initialization
+    /// <summary>
+    /// Use this for initialization
+    /// </summary>
     void Start()
     {
-        sound = GetComponent<AudioSource>();
-        plane = GameObject.FindGameObjectWithTag("GamePlane");
+        _sound = GetComponent<AudioSource>();
+        _plane = GameObject.FindGameObjectWithTag("GamePlane");
         InvokeRepeating("Shoot", 1.0f, 0.5f);
     }
 
-    // Update is called once per frame
+    /// <summary>
+    /// Update is called once per frame
+    /// </summary>
     void LateUpdate()
     {
-        if (transform.position.z - plane.transform.position.z <= targetDistance)
+        if (transform.position.z - _plane.transform.position.z <= targetDistance)
         {
             Vector3 newPosition = transform.position;
-            newPosition.z = plane.transform.position.z + targetDistance;
-            transform.position = newPosition;            
+            newPosition.z = _plane.transform.position.z + targetDistance;
+            transform.position = newPosition;
         }
         else
         {
@@ -44,17 +50,20 @@ public class AI : MonoBehaviour
         GameObject otherGO = collision.gameObject;
         if (otherGO.tag == "Bullet")
         {
-            sound.Play();
+            _sound.Play();
             GameManager.Instance.AddScore(10);
             Destroy(otherGO);
-            Destroy(gameObject, 2.0f);
+            Destroy(gameObject);
         }
     }
 
+    /// <summary>
+    /// Shoots Bullet
+    /// </summary>
     void Shoot()
     {
         GameObject newBullet = Instantiate(bullet, transform.position, transform.rotation) as GameObject;
         newBullet.GetComponent<Rigidbody>().AddForce(transform.forward * velocity);
-        Destroy(newBullet.gameObject, destroyTime);        
+        Destroy(newBullet.gameObject, _destroyTime);
     }
 }

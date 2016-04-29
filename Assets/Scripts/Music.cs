@@ -1,11 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+/// <summary>
+/// Singleton Music Player
+/// </summary>
 public class Music : MonoBehaviour {
 
     public static Music instance;
-
-    // Use this for initialization
+    /// <summary>
+    /// Use this for initialization
+    /// </summary>
     void Start () {
         if (instance)
         {
@@ -17,9 +20,4 @@ public class Music : MonoBehaviour {
             instance = this;
         }
     }
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
 }

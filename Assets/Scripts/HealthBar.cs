@@ -2,17 +2,26 @@
 using System.Collections;
 using UnityEngine.UI;
 
+/// <summary>
+/// Displays Health Bar
+/// </summary>
 public class HealthBar : MonoBehaviour
 {
-    Image healthBar;
-        
+    Image _healthBar;     // Health Bar
+
+    /// <summary>
+    /// Get Health Bar Image
+    /// </summary>
     void Start()
     {
-        healthBar = GetComponent<Image>();
+        _healthBar = GetComponent<Image>();
     }
 
+    /// <summary>
+    /// Fill the Health Bar
+    /// </summary>
     void Update()
     {
-        healthBar.fillAmount = HealthManager.Instance.getCurrentHealth()/ 100.0f;
+        _healthBar.fillAmount = HealthManager.Instance.getCurrentHealth() / 100.0f;
     }
 }

@@ -1,18 +1,17 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+/// <summary>
+/// Camera Follows Player 
+/// </summary>
 public class FollowPlayer : MonoBehaviour
 {
-    public Transform objectToFollow;
-    public Vector2 movementRatio;
+    public Transform objectToFollow;        //Object for Camera to Follow
+    public Vector2 movementRatio;   //Ratio for Following the Movement
 
-    // Use this for initialization
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
+    /// <summary>
+    /// Update is called once per frame
+   /// </summary>
     void LateUpdate()
     {
         Vector3 newPosition = objectToFollow.position;

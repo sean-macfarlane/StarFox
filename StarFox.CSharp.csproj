@@ -70,12 +70,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Destroyed_city_FREE\Standard Assets\Character Controllers\Sources\Scripts\MouseLook.cs" />
-    <Compile Include="Assets\Gameover.cs" />
     <Compile Include="Assets\Scripts\AI.cs" />
     <Compile Include="Assets\Scripts\Collect.cs" />
-    <Compile Include="Assets\Scripts\Destroy.cs" />
     <Compile Include="Assets\Scripts\FollowPlayer.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
+    <Compile Include="Assets\Scripts\Gameover.cs" />
     <Compile Include="Assets\Scripts\HealthBar.cs" />
     <Compile Include="Assets\Scripts\HealthManager.cs" />
     <Compile Include="Assets\Scripts\MoveFoward.cs" />
@@ -86,6 +85,7 @@
     <Compile Include="Assets\Scripts\Spawner.cs" />
     <Compile Include="Assets\Scripts\StartScreen.cs" />
     <Compile Include="Assets\Scripts\Tricks.cs" />
+    <Compile Include="Assets\Scripts\highscores.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Destroyed_city_FREE\Destroyed_city_FREE_Info.txt" />

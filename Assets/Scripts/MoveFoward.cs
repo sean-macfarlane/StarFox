@@ -1,16 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+/// <summary>
+/// Moves the GamePlane
+/// </summary>
 public class MoveFoward : MonoBehaviour
 {
 
-    public float speed = 1.0f;
-
-    // Use this for initialization
-    void Start()
-    {
-
-    }
+    public float speed = 50.0f; //Speed of Gameplane
 
     // Update is called once per frame
     void Update()

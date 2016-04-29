@@ -2,10 +2,16 @@
 using UnityEngine.UI;
 using System.Collections;
 
+/// <summary>
+/// Game Manager
+/// </summary>
 public class GameManager : MonoBehaviour
 {
-
     private static GameManager instance = null;
+
+    /// <summary>
+    /// Singleton for GameManager
+    /// </summary>
     public static GameManager Instance
     {
         get { return instance; }
@@ -21,24 +27,27 @@ public class GameManager : MonoBehaviour
         {
             instance = this;
         }
-        gameObject.name = "$GameManager";
     }
 
     public Text scoreText;      // Text object for Score
     public int score;     // Score value
 
     string _highscoreKey = "VALUE_HIGHSCORE";   //Stores the Highscore
-    AudioSource sound;
+    AudioSource _sound; //Reference to Score Sound
 
-    // Use this for initialization
+    /// <summary>
+    /// Use this for initialization
+    /// </summary>
     void Start()
     {
-        sound = GetComponent<AudioSource>();
+        _sound = GetComponent<AudioSource>();
         score = 0;
         UpdateScore();
     }
 
-    // Update is called once per frame
+    /// <summary>
+    /// Update is called once per frame
+    /// </summary>
     void Update()
     {
 
@@ -58,7 +67,7 @@ public class GameManager : MonoBehaviour
     ///<param name=”points”>The amount of points to add to the score</param>
     public void AddScore(int points)
     {
-        sound.Play();
+        _sound.Play();
         score += points;
         UpdateScore();
     }

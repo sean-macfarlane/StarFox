@@ -1,22 +1,19 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+/// <summary>
+/// Player Tricks
+/// </summary>
 public class Tricks : MonoBehaviour
-{ 
-    public float barrelRollDuration = 0.5f;
+{
+    public float barrelRollDuration = 0.5f; // Duration of a Barrel Roll
+    public bool inTrick = false;    // If the Player is currently doing a trick
 
-    public bool inTrick = false;
-
-    // Use this for initialization
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
+    /// <summary>
+    ///  Update is called once per frame
+    /// </summary>
     void Update()
     {
-
         if (!inTrick)
         {
             if (Input.GetKeyDown(KeyCode.B))
@@ -31,9 +28,13 @@ public class Tricks : MonoBehaviour
                 }
             }
         }
-
     }
 
+    /// <summary>
+    /// To do a Barrel Roll
+    /// </summary>
+    /// <param name="direction"></param>
+    /// <returns></returns>
     IEnumerator BarrelRoll(bool direction)
     {
         inTrick = true;
